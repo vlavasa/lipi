@@ -1,5 +1,6 @@
 // @ts-check
 import { defineConfig, fontProviders, svgoOptimizer } from 'astro/config';
+import { fileURLToPath } from "node:url";
 import tailwindcss from '@tailwindcss/vite';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
@@ -17,6 +18,7 @@ import { remarkObsidian } from './src/plugins/remark-obsidian.ts';
 
 // https://astro.build/config
 export default defineConfig({
+  root: fileURLToPath(new URL(".", import.meta.url)),
   site: siteConfig.url,
 
   image: {
