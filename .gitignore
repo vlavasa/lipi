@@ -33,6 +33,5 @@ public/pagefind/*
 .codex/
 .claude/
 .agents/
-AGENTS.md
 TODO.md
 skills-lock.json
