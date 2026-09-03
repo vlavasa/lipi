@@ -26,12 +26,12 @@ export interface GalleryImage {
 // ============================================================================
 
 const allGalleryImages = import.meta.glob<{ default: ImageMetadata }>(
-  '/src/content/**/gallery/*.{jpg,jpeg,png,webp,avif,gif,JPG,JPEG,PNG,WEBP}',
+  '../content/**/gallery/*.{jpg,jpeg,png,webp,avif,gif,JPG,JPEG,PNG,WEBP}',
   { eager: true }
 );
 
 const allAttachmentImages = import.meta.glob<{ default: ImageMetadata }>(
-  '/src/content/**/attachments/*.{jpg,jpeg,png,webp,avif,gif,JPG,JPEG,PNG,WEBP}',
+  '../content/**/attachments/*.{jpg,jpeg,png,webp,avif,gif,JPG,JPEG,PNG,WEBP}',
   { eager: true }
 );
 
@@ -80,15 +80,13 @@ export function shuffleArray<T>(array: T[]): T[] {
  *
  * Handles:
  *   posts/2011-03-21-bhuleshwar/attachments/image.jpg
- *   → /src/content/posts/2011-03-21-bhuleshwar/attachments/image.jpg
+ *   → ../content/posts/2011-03-21-bhuleshwar/attachments/image.jpg
  */
 function vaultPathToGlobKey(vaultPath: string): string {
-  // Already a glob key
-  if (vaultPath.startsWith('/src/content/')) return vaultPath;
-  // Vault-absolute: posts/...
-  if (vaultPath.startsWith('travels/')) return `/src/content/${vaultPath}`;
-  // Fallback
-  return `/src/content/${vaultPath}`;
+  const normalized = vaultPath.replace(/\\/g, '/').replace(/^\.\//, '');
+  const contentPath = normalized.replace(/^\/?src\/content\//, '');
+
+  return `../content/${contentPath}`;
 }
 
 // ============================================================================
