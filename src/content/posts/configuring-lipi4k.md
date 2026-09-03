@@ -32,10 +32,10 @@ const userConfig: UserConfig = {
 ```ts
   logo: "/logo.svg",
   avatar: "/avatar.png",
-  defaultOGImage: "/og.jpg",
+  defaultOGImage: "/custom-og.jpg",
 ```
 
-`logo` is the path to the site logo, served from the `public/` directory. It is only shown when `showLogo` is set to `true`. `avatar` is the author image shown in the hero area. `defaultOGImage` is the fallback Open Graph image used when a post does not define its own cover; Lipi4k generates per-post OG images automatically, so this file only appears on the home page and on pages without post context.
+`logo` is the path to the site logo, served from the `public/` directory. It is only shown when `showLogo` is set to `true`. `avatar` is the author image shown in the hero area. `defaultOGImage` optionally replaces the generated `/og.png` used by the home page and other pages without their own image. Place a custom file such as `custom-og.jpg` in `public/`; individual posts continue to use their automatically generated OG images.
 
 ## Navigation
 

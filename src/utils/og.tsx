@@ -4,6 +4,7 @@ import satori from "satori";
 import { html } from "satori-html";
 import { Resvg } from "@resvg/resvg-js";
 import siteConfig from "@/site.config";
+import { absoluteUrl } from "@/utils/url";
 import notoSansRegular from "@/assets/fonts/NotoSans-Regular.ttf";
 import notoSerifRegular from "@/assets/fonts/NotoSerif-Regular.ttf";
 import notoSerifBold from "@/assets/fonts/NotoSerif-Bold.ttf";
@@ -33,7 +34,7 @@ export async function generateOgImage({
   description,
   category,
   published,
-  site = siteConfig.url,
+  site = absoluteUrl("/", siteConfig.url),
   }: OgImageOptions) {
   const markup = html(`
     <div

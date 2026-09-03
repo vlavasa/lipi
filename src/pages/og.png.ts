@@ -20,8 +20,6 @@ export const GET: APIRoute =
 
           category:
             "Astro Theme",
-
-          site: siteConfig.url,
         }
       );
 
