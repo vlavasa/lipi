@@ -35,7 +35,7 @@ The visual design takes its cues from the [Kami](https://kami.tw93.fun) design l
 - Tag pages and tag-driven related posts
 - Reading progress indicator via CSS scroll-driven animations
 - Dynamic per-post OG images generated with Satori — no manual image creation
-- Full-text search via Pagefind — static index, no external API, no tracking
+- Full-text search index via Pagefind — static, with no external API or tracking; exposing the search UI is still TODO
 - RSS feed and sitemap included
 - Shiki syntax highlighting with light/dark token mapping
 - GitHub-Flavored Markdown and MDX support
@@ -96,7 +96,7 @@ const userConfig: UserConfig = {
 };
 ```
 
-The full configuration reference is in the [Configuring Lipi4k](./src/content/posts/configuring-lipi4k.md) guide included with the template.
+The full configuration reference is available as a [rendered Configuring Lipi4k guide](https://vlavasa.github.io/lipi4k/posts/configuring-lipi4k/) and in its [Markdown source](./src/content/posts/configuring-lipi4k.md).
 
 ---
 

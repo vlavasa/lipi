@@ -26,13 +26,15 @@ The reading measure is held at 68 characters per line. The paragraph spacing is 
 
 ## Technology
 
-Lipi4k is built with **Astro**, a static site generator with an island architecture. The output is primarily static HTML with JavaScript only where the interface requires it (the theme toggle, the scroll-to-top button, the search).
+Lipi4k is built with **Astro**, a static site generator with an island architecture. The output is primarily static HTML with JavaScript only where the interface requires it, including the theme toggle, scroll-to-top button, and archive filters.
 
 Styling is handled by **Tailwind CSS v4**, configured without a Tailwind config file. All theme tokens are defined as CSS custom properties and consumed through the Tailwind CSS variable bridge. There are no custom Tailwind plugins.
 
 Syntax highlighting uses **Shiki**, which is bundled with Astro. It renders code to static HTML with no client-side JavaScript. The colour tokens are mapped to Lipi4k's theme variables so highlighting adapts to light and dark mode.
 
-Search is provided by **Pagefind**, a static full-text search library that runs entirely in the browser against a pre-built index. The index is generated at build time. Search adds no external API calls and no tracking.
+The full-text index is provided by **Pagefind**, a static search library that runs entirely in the browser against data generated at build time. It adds no external API calls and no tracking.
+
+> **TODO:** Expose the existing Pagefind modal through a visible header trigger or search box. The index and modal are built, but visitors currently have no control that opens them.
 
 Fonts are loaded through **Astro's font API**, which optimises loading, subsets the files, and generates the `@font-face` declarations automatically. Font files are bundled into the build output rather than loaded from a third-party CDN.
 
@@ -48,4 +50,4 @@ Fonts are loaded through **Astro's font API**, which optimises loading, subsets 
 
 ## Source
 
-Lipi4k is distributed under the MIT License, the same license used by the [original Lipi project](https://github.com/thelocalhoststudio/lipi). Its source is available from the link in the footer.
+Lipi4k is distributed under the MIT License, the same license used by the [original Lipi project](https://github.com/thelocalhoststudio/lipi). Its source is available in the [Lipi4k repository](https://github.com/vlavasa/lipi4k).

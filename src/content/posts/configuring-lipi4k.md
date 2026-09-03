@@ -25,7 +25,7 @@ const userConfig: UserConfig = {
 };
 ```
 
-`title` appears in the browser tab, the page `<title>` element, and the default OG image. `description` is the fallback meta description for any page that does not provide its own. `url` is the canonical base URL and is used to build absolute links in the sitemap and RSS feed. `author` appears in the JSON-LD structured data attached to each post.
+`title` appears in the browser tab, the page `<title>` element, and the default OG image. `description` is the fallback meta description for any page that does not provide its own. `url` is the public origin used to build canonical links, sitemap entries, RSS links, and OG metadata. For a subpath deployment such as GitHub Pages, keep the repository path in Astro's `BASE_PATH` setting rather than appending it to `url`. `author` appears in the JSON-LD structured data attached to each post.
 
 ## Branding
 
@@ -35,11 +35,13 @@ const userConfig: UserConfig = {
   defaultOGImage: "/custom-og.jpg",
 ```
 
-`logo` is the path to the site logo, served from the `public/` directory. It is only shown when `showLogo` is set to `true`. `avatar` is the author image shown in the hero area. `defaultOGImage` optionally replaces the generated `/og.png` used by the home page and other pages without their own image. Place a custom file such as `custom-og.jpg` in `public/`; individual posts continue to use their automatically generated OG images.
+`logo` is the path to the site logo, served from the `public/` directory. It is only shown when `showLogo` is set to `true`. `defaultOGImage` optionally replaces the generated `/og.png` used by the home page and other pages without their own image. Place a custom file such as `custom-og.jpg` in `public/`; individual posts continue to use their automatically generated OG images.
+
+> **TODO:** `avatar` is accepted by the configuration schema but is not currently rendered by either home-page hero variant.
 
 ## Navigation
 
-The header and footer links are configured separately, which lets you show a compact top navigation while keeping secondary links (RSS, archive, source) in the footer.
+Header and planned footer links are configured separately. Header navigation is currently rendered; footer-link rendering is not implemented yet.
 
 ```ts
   navigation: [
@@ -57,6 +59,8 @@ The header and footer links are configured separately, which lets you show a com
 
 Each item takes a `title` (the visible label) and a `url`. Navigation links support both internal paths and external URLs.
 
+> **TODO:** Render `footerLinks` in the site footer. The setting is currently accepted but has no visible effect.
+
 ## Social Links
 
 ```ts
@@ -66,7 +70,9 @@ Each item takes a `title` (the visible label) and a `url`. Navigation links supp
   ],
 ```
 
-Social links appear in the header alongside the theme toggle. The `icon` field accepts `"github"`, `"x"`, or `"linkedin"`. If you omit `icon`, the link renders as plain text. Remove the social array entirely if you prefer no social links.
+The `icon` field is intended to accept `"github"`, `"x"`, or `"linkedin"`. Remove the `social` array if you do not plan to expose social links.
+
+> **TODO:** Render configured `social` links in the header. The setting is currently accepted but has no visible effect.
 
 ## Footer Credits
 
@@ -74,7 +80,9 @@ Social links appear in the header alongside the theme toggle. The `icon` field a
   footerCredits: "Designed for reading. Built with Astro & Lipi4k",
 ```
 
-This string appears at the very bottom of every page, in small text. It is a good place for a tagline, a copyright notice, or a brief attribution. Leave it empty to show nothing.
+This setting is intended for a tagline, copyright notice, or brief attribution at the bottom of every page.
+
+> **TODO:** Render `footerCredits` in the site footer. The setting is currently accepted but has no visible effect.
 
 ## Pagination and Feed Depth
 
@@ -102,4 +110,4 @@ This string appears at the very bottom of every page, in small text. It is a goo
   heroVariant: "studio",
 ```
 
-The home page hero comes in two variants: `"default"` renders a minimal text-based hero, and `"studio"` renders the full studio hero with the studio logotype and handwritten annotation. If you are publishing under your own name rather than a studio brand, `"default"` is the cleaner choice.
+The home page hero comes in two variants: `"default"` renders the Markdown content from `src/content/pages/home-intro.md`, while `"studio"` displays the site description as a large typographic statement followed by a divider. The global annotation is rendered separately in the home-page footer.

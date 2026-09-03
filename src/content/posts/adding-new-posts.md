@@ -77,7 +77,7 @@ draft: false
 
 ## The Featured Post
 
-The post at the top of the home page (the featured post, with the handwritten annotation alongside it) is simply the most recently published non-draft post. There is no `featured: true` flag. To change which post is featured, change its `published` date to be the most recent among all your posts.
+The post at the top of the home page is simply the most recently published non-draft post. There is no `featured: true` flag. To change which post is featured, change its `published` date to be the most recent among all your posts.
 
 ## Writing the Post
 
