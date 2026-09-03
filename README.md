@@ -1,18 +1,26 @@
-# Lipi
+# Lipi4k
 
-A typography-first Astro template for long-form writing. Built for essays, travel notes, developer journals, and personal archives — publishing environments where the words come first.
+A maintained fork of [Lipi](https://github.com/thelocalhoststudio/lipi), a typography-first Astro template for long-form writing. Built for essays, travel notes, developer journals, and personal archives — publishing environments where the words come first.
 
-**[Live Demo](https://astro-lipi.pages.dev)** · **[Source](https://github.com/thelocalhoststudio/lipi)**
+**[Source](https://github.com/vlavasa/lipi4k)** · **[Original Lipi project](https://github.com/thelocalhoststudio/lipi)** · **[Original Lipi demo](https://astro-lipi.pages.dev)**
 
-> **Lipi** (लिपि) is the Sanskrit word for script, the written form of a language.
+> **Lipi** (लिपि) is the Sanskrit word for script, the written form of a language. **Lipi4k** is pronounced like “Lipi fork.”
 
-![Lipi preview](./public/lipi-preview.png)
+![Lipi4k preview](./public/lipi-preview.png)
 
 ---
 
-## What Lipi is for
+## About this fork
 
-Lipi is a publishing template, not a general-purpose blog theme. It is designed for writers who publish chronologically and want their site to feel like a considered publication rather than a web application. It is not a good fit for sites that need sidebars, comment sections, newsletter embeds, or dashboards.
+Lipi4k was forked from [Lipi](https://github.com/thelocalhoststudio/lipi), created by [The Localhost Studio](https://github.com/thelocalhoststudio). It began as a place to prepare focused fixes for contribution back to the original project. As the original project appears to be no longer maintained, Lipi4k now continues its development independently and integrates those fixes into its own `main` branch.
+
+Lipi4k retains the original project's design and purpose while providing ongoing maintenance, dependency updates, and fixes. The upstream repository remains an important reference and the starting point of this project.
+
+---
+
+## What Lipi4k is for
+
+Lipi4k is a publishing template, not a general-purpose blog theme. It is designed for writers who publish chronologically and want their site to feel like a considered publication rather than a web application. It is not a good fit for sites that need sidebars, comment sections, newsletter embeds, or dashboards.
 
 The visual design takes its cues from the [Kami](https://kami.tw93.fun) design language: warm parchment ground, a constrained reading measure (68 ch), generous line-height, and a single terracotta accent. The output is static HTML. The typography holds under Cmd+P.
 
@@ -42,13 +50,13 @@ The visual design takes its cues from the [Kami](https://kami.tw93.fun) design l
 ### Use this template
 
 ```sh
-npm create astro@latest -- --template thelocalhoststudio/lipi
+npm create astro@latest -- --template vlavasa/lipi4k
 ```
 
 ### Clone manually
 
 ```sh
-git clone https://github.com/thelocalhoststudio/lipi my-site
+git clone https://github.com/vlavasa/lipi4k my-site
 cd my-site
 npm install
 npm run dev
@@ -82,14 +90,14 @@ const userConfig: UserConfig = {
 };
 ```
 
-The full configuration reference is in the [Configuring Lipi](https://astro-lipi.pages.dev/posts/configuring-lipi) post included with the template.
+The full configuration reference is in the [Configuring Lipi](./src/content/posts/configuring-lipi.md) guide included with the template.
 
 ---
 
 ## Project Structure
 
 ```txt
-lipi/
+lipi4k/
 ├── configs/
 │   └── user.config.ts        # All site settings live here
 ├── public/
@@ -176,6 +184,7 @@ Fonts are configured in `astro.config.mjs` under the `fonts` array. Swap the `na
 
 ## Credits
 
+- Lipi4k is based on [Lipi](https://github.com/thelocalhoststudio/lipi), created by [The Localhost Studio](https://github.com/thelocalhoststudio)
 - Typography inspired by the [Kami](https://kami.tw93.fun) design language
 - Body typeface: [Literata](https://fonts.google.com/specimen/Literata) by TypeTogether
 - UI typeface: [Manrope](https://fonts.google.com/specimen/Manrope) by Mikhail Sharanda
@@ -188,4 +197,4 @@ Fonts are configured in `astro.config.mjs` under the `fonts` array. Swap the `na
 
 ## License
 
-MIT — made by [The Localhost Studio](https://github.com/thelocalhoststudio).
+Lipi4k is distributed under the MIT License, the same license used by the [original Lipi project](https://github.com/thelocalhoststudio/lipi#license). The original project was made by [The Localhost Studio](https://github.com/thelocalhoststudio).
