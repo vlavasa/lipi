@@ -1,6 +1,6 @@
 ---
-title: Configuring Lipi
-description: A field-by-field guide to lipi.config.ts and what each setting changes in the published site.
+title: Configuring Lipi4k
+description: A field-by-field guide to user.config.ts and what each setting changes in the published site.
 published: 2026-05-24
 category: Guide
 tags:
@@ -9,14 +9,14 @@ tags:
   - setup
 ---
 
-All of Lipi's site-level configuration lives in one file: `configs/lipi.config.ts`. Open it, change a value, and the dev server reflects the change immediately. There is no separate environment file, no admin panel, no database entry to update. The configuration is code, which means it is in version control, diffable, and portable.
+All of Lipi4k's site-level configuration lives in one file: `configs/user.config.ts`. Open it, change a value, and the dev server reflects the change immediately. There is no separate environment file, no admin panel, no database entry to update. The configuration is code, which means it is in version control, diffable, and portable.
 
 ## Identity
 
 The four required fields establish who you are and where the site lives.
 
 ```ts
-// configs/lipi.config.ts
+// configs/user.config.ts
 const userConfig: UserConfig = {
   title: "The Long Read",
   description: "Essays and travel notes from the edge of the timetable.",
@@ -35,7 +35,7 @@ const userConfig: UserConfig = {
   defaultOGImage: "/og.jpg",
 ```
 
-`logo` is the path to the site logo, served from the `public/` directory. It is only shown when `showLogo` is set to `true`. `avatar` is the author image shown in the hero area. `defaultOGImage` is the fallback Open Graph image used when a post does not define its own cover; Lipi generates per-post OG images automatically, so this file only appears on the home page and on pages without post context.
+`logo` is the path to the site logo, served from the `public/` directory. It is only shown when `showLogo` is set to `true`. `avatar` is the author image shown in the hero area. `defaultOGImage` is the fallback Open Graph image used when a post does not define its own cover; Lipi4k generates per-post OG images automatically, so this file only appears on the home page and on pages without post context.
 
 ## Navigation
 
@@ -71,7 +71,7 @@ Social links appear in the header alongside the theme toggle. The `icon` field a
 ## Footer Credits
 
 ```ts
-  footerCredits: "Designed for reading. Built with Astro & Lipi",
+  footerCredits: "Designed for reading. Built with Astro & Lipi4k",
 ```
 
 This string appears at the very bottom of every page, in small text. It is a good place for a tagline, a copyright notice, or a brief attribution. Leave it empty to show nothing.

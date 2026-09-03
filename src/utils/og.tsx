@@ -57,7 +57,7 @@ export async function generateOgImage({
       >
         <div
           style="
-            font-family: 'Lipi Sans';
+            font-family: 'Lipi4k Sans';
             font-size: 24px;
             opacity: 0.7;
             display: flex;
@@ -88,7 +88,7 @@ export async function generateOgImage({
 
         <div
           style="
-            font-family: 'Lipi Serif';
+            font-family: 'Lipi4k Serif';
             font-size: 72px;
             line-height: 1.1;
             font-weight: 700;
@@ -104,7 +104,7 @@ export async function generateOgImage({
             ? `
             <div
               style="
-                font-family: 'Lipi Sans';
+                font-family: 'Lipi4k Sans';
                 font-size: 30px;
                 line-height: 1.45;
                 opacity: 0.8;
@@ -120,7 +120,7 @@ export async function generateOgImage({
 
       <div
         style="
-          font-family: 'Lipi Sans';
+          font-family: 'Lipi4k Sans';
           font-size: 24px;
           opacity: 0.6;
         "
@@ -135,21 +135,21 @@ export async function generateOgImage({
     height: HEIGHT,
     fonts: [
     {
-      name: "Lipi Serif",
+      name: "Lipi4k Serif",
       data: notoSerifRegular,
       weight: 400,
       style: "normal",
     },
 
     {
-      name: "Lipi Serif",
+      name: "Lipi4k Serif",
       data: notoSerifBold,
       weight: 700,
       style: "normal",
     },
 
     {
-      name: "Lipi Sans",
+      name: "Lipi4k Sans",
       data: notoSansRegular,
       weight: 400,
       style: "normal",

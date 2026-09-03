@@ -66,8 +66,8 @@
   --color-primary             : var(--primary);
   --color-primary-foreground  : var(--primary-foreground);
   
-  --font-content              : var(--font-lipi-serif);
-  --font-ui                   : var(--font-lipi-sans);
-  --font-code                 : var(--font-lipi-mono);
-  --font-annotation           : var(--font-lipi-hand);
+  --font-content              : var(--font-lipi4k-serif);
+  --font-ui                   : var(--font-lipi4k-sans);
+  --font-code                 : var(--font-lipi4k-mono);
+  --font-annotation           : var(--font-lipi4k-hand);
 }

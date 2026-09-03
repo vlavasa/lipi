@@ -1,6 +1,6 @@
 ---
-title: Customising Lipi
-description: How to change Lipi's colours, typefaces, and visual character without touching a single component file.
+title: Customising Lipi4k
+description: How to change Lipi4k's colours, typefaces, and visual character without touching a single component file.
 published: 2026-05-22
 category: Guide
 tags:
@@ -9,11 +9,11 @@ tags:
   - css
 ---
 
-Lipi is designed to be a frame, not a fixed canvas. The visual system is built on CSS custom properties, which means you can change the palette, the typefaces, and the tone of the site by editing a single file and a configuration object. You do not need to touch any Astro or Tailwind component files to make Lipi your own.
+Lipi4k is designed to be a frame, not a fixed canvas. The visual system is built on CSS custom properties, which means you can change the palette, the typefaces, and the tone of the site by editing a single file and a configuration object. You do not need to touch any Astro or Tailwind component files to make Lipi4k your own.
 
 ## The Colour System
 
-All colours in Lipi derive from two layers of CSS variables defined in `src/styles/theme.css`.
+All colours in Lipi4k derive from two layers of CSS variables defined in `src/styles/theme.css`.
 
 The first layer is the base token scale: eleven neutral tones from `--base-50` (the lightest, near-white parchment) to `--base-950` (the darkest, near-black), plus a single brand colour called `--brand`.
 
@@ -65,14 +65,14 @@ Dark mode colours are defined in the `[data-theme="dark"]` block in `theme.css`.
 
 ## Typefaces
 
-Lipi uses four font slots, each mapped to a CSS variable:
+Lipi4k uses four font slots, each mapped to a CSS variable:
 
 | Variable | Role | Default font |
 | --- | --- | --- |
-| `--font-lipi-serif` | Body text, headings | Literata |
-| `--font-lipi-sans` | UI elements, metadata | Manrope |
-| `--font-lipi-mono` | Inline code, code blocks | Fira Code |
-| `--font-lipi-hand` | Handwritten annotations | Caveat |
+| `--font-lipi4k-serif` | Body text, headings | Literata |
+| `--font-lipi4k-sans` | UI elements, metadata | Manrope |
+| `--font-lipi4k-mono` | Inline code, code blocks | Fira Code |
+| `--font-lipi4k-hand` | Handwritten annotations | Caveat |
 
 These font variables are loaded via Astro's font API in `astro.config.mjs`. To change a typeface, update the corresponding entry in the `fonts` array:
 
@@ -81,7 +81,7 @@ These font variables are loaded via Astro's font API in `astro.config.mjs`. To c
 fonts: [
   {
     name: "Lora",                       // replace Literata with Lora
-    cssVariable: "--font-lipi-serif",
+    cssVariable: "--font-lipi4k-serif",
     provider: fontProviders.fontsource(),
     weights: [400, 500, 700],
     fallbacks: ["serif"],

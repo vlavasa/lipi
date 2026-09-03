@@ -1,6 +1,6 @@
 ---
 title: The Elements of the Page
-description: A typographic inventory of every markdown element Lipi renders, written as an essay worth reading.
+description: A typographic inventory of every markdown element Lipi4k renders, written as an essay worth reading.
 published: 2026-05-16
 category: Guide
 tags:
@@ -9,7 +9,7 @@ tags:
   - writing
 ---
 
-Every publishing system makes decisions about prose. The decisions you can see (typeface, measure, spacing) are downstream of decisions you cannot: how blockquotes are weighted, whether footnotes interrupt or defer, how a table earns its place in a text. This page renders each typographic element Lipi supports, using real content so you can judge not just the rendering but whether the element earns its place.
+Every publishing system makes decisions about prose. The decisions you can see (typeface, measure, spacing) are downstream of decisions you cannot: how blockquotes are weighted, whether footnotes interrupt or defer, how a table earns its place in a text. This page renders each typographic element Lipi4k supports, using real content so you can judge not just the rendering but whether the element earns its place.
 
 ---
 
@@ -21,7 +21,7 @@ The tradition of marking up a document goes back further than HTML. Medieval scr
 
 The paragraph is the unit of sustained thought. Typography serves the paragraph before it serves anything else. A generous measure (around 68 characters per line), a comfortable line-height, and a face with sufficient optical size at body weight: these are the conditions under which reading becomes effortless rather than managed.
 
-Lipi constrains its measure to 68 characters. This is narrower than many web layouts, which often run to 90 or 100 characters to fill a widescreen viewport. The narrower measure is deliberate. The eye returns to the left margin more frequently, which creates rhythm. Rhythm is what makes reading feel easy.
+Lipi4k constrains its measure to 68 characters. This is narrower than many web layouts, which often run to 90 or 100 characters to fill a widescreen viewport. The narrower measure is deliberate. The eye returns to the left margin more frequently, which creates rhythm. Rhythm is what makes reading feel easy.
 
 ### Emphasis in Running Text
 
@@ -33,7 +33,7 @@ Inline `code` marks technical terms, file paths, configuration values, and comma
 
 #### Links and References
 
-[The shape of a link](https://example.com) inside a paragraph is a small interruption. The underline signals that the text is a pointer, not just a word. Lipi uses a muted border-colour underline at rest, and shifts to the primary accent on hover. The goal is that links are findable without being distracting.
+[The shape of a link](https://example.com) inside a paragraph is a small interruption. The underline signals that the text is a pointer, not just a word. Lipi4k uses a muted border-colour underline at rest, and shifts to the primary accent on hover. The goal is that links are findable without being distracting.
 
 ---
 
@@ -85,7 +85,7 @@ Nested lists are possible, but warrant scrutiny. Use them only when the hierarch
 
 ## Code With Context
 
-A code block is not a footnote. It is a primary element of technical writing, and it should render with as much care as a paragraph. Lipi uses Shiki for syntax highlighting and preserves the warm neutral palette across light and dark modes.
+A code block is not a footnote. It is a primary element of technical writing, and it should render with as much care as a paragraph. Lipi4k uses Shiki for syntax highlighting and preserves the warm neutral palette across light and dark modes.
 
 ```ts
 // src/content.config.ts
@@ -122,7 +122,7 @@ A table is justified when the data has two or more meaningful axes. A table used
 
 A figure is an image with context. The caption is not a description of what the image shows; the reader can see that. The caption explains why the image is there, or what to notice.
 
-The syntax in Lipi is standard markdown image syntax inside a `<figure>` element:
+The syntax in Lipi4k is standard markdown image syntax inside a `<figure>` element:
 
 <figure>
   <img src="/placeholder.jpg" alt="The stone lanterns at Fushimi Inari, photographed at dusk with the path behind them still warm from the day." />
@@ -133,7 +133,7 @@ The syntax in Lipi is standard markdown image syntax inside a `<figure>` element
 
 ## Definition Lists
 
-Definition lists are a publishing convention that HTML supports natively but markdown largely ignores. In Lipi, you can use raw HTML for definitions:
+Definition lists are a publishing convention that HTML supports natively but markdown largely ignores. In Lipi4k, you can use raw HTML for definitions:
 
 <dl>
   <dt>Measure</dt>
@@ -154,7 +154,7 @@ Footnotes are a device for honesty.[^1] They acknowledge that a sentence has mor
 
 [^1]: And, occasionally, for humour. The footnote as comic register is a long tradition, from Gibbon to Pratchett.
 
-[^2]: Lipi renders footnotes at the bottom of the post, linked from the inline marker. The styling is restrained: a small horizontal rule, then the note text in a slightly reduced size, clearly connected to its parent sentence.
+[^2]: Lipi4k renders footnotes at the bottom of the post, linked from the inline marker. The styling is restrained: a small horizontal rule, then the note text in a slightly reduced size, clearly connected to its parent sentence.
 
 ---
 
@@ -166,4 +166,4 @@ The rule above this paragraph closes the list of elements and returns the essay 
 
 ---
 
-Typography does not make writing good. But it can make good writing readable, and readable writing is more likely to be read to the end. Every element in this reference exists to serve that purpose: not to display Lipi's features, but to give the words the best possible conditions for being met.
+Typography does not make writing good. But it can make good writing readable, and readable writing is more likely to be read to the end. Every element in this reference exists to serve that purpose: not to display Lipi4k's features, but to give the words the best possible conditions for being met.

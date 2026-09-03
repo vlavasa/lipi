@@ -1,10 +1,10 @@
 ---
 title: Colophon
-description: The typefaces, tools, and decisions behind Lipi.
+description: The typefaces, tools, and decisions behind Lipi4k.
 updated: 2026-05-26
 ---
 
-A colophon records how a book was made: who set the type, which press printed it, when and where. This page serves that function for Lipi.
+A colophon records how a book was made: who set the type, which press printed it, when and where. This page serves that function for Lipi4k.
 
 ## Typefaces
 
@@ -18,7 +18,7 @@ The annotation typeface is **Caveat**, a handwritten face used for the single fl
 
 ## Design Language
 
-Lipi's visual and typographic character is inspired by the [Kami](https://kami.tw93.fun) design language. The guiding principles are: warm over cool, constrained over expansive, quiet over assertive.
+Lipi4k's visual and typographic character is inspired by the [Kami](https://kami.tw93.fun) design language. The guiding principles are: warm over cool, constrained over expansive, quiet over assertive.
 
 The base colour scale is a single warm neutral ramp of eleven steps, from a near-white parchment (`#F5F4ED`) to a near-black (`#141413`). There is one brand colour, a terracotta (`#E85D2A`), used sparingly: links on hover, the reading progress bar, the drop capital, the CTA on the featured post. The scale is not cold grey and it is not blue. It reads like a printed page rather than a screen.
 
@@ -26,11 +26,11 @@ The reading measure is held at 68 characters per line. The paragraph spacing is 
 
 ## Technology
 
-Lipi is built with **Astro**, a static site generator with an island architecture. The output is primarily static HTML with JavaScript only where the interface requires it (the theme toggle, the scroll-to-top button, the search).
+Lipi4k is built with **Astro**, a static site generator with an island architecture. The output is primarily static HTML with JavaScript only where the interface requires it (the theme toggle, the scroll-to-top button, the search).
 
 Styling is handled by **Tailwind CSS v4**, configured without a Tailwind config file. All theme tokens are defined as CSS custom properties and consumed through the Tailwind CSS variable bridge. There are no custom Tailwind plugins.
 
-Syntax highlighting uses **Shiki**, which is bundled with Astro. It renders code to static HTML with no client-side JavaScript. The colour tokens are mapped to Lipi's theme variables so highlighting adapts to light and dark mode.
+Syntax highlighting uses **Shiki**, which is bundled with Astro. It renders code to static HTML with no client-side JavaScript. The colour tokens are mapped to Lipi4k's theme variables so highlighting adapts to light and dark mode.
 
 Search is provided by **Pagefind**, a static full-text search library that runs entirely in the browser against a pre-built index. The index is generated at build time. Search adds no external API calls and no tracking.
 
@@ -42,10 +42,10 @@ Fonts are loaded through **Astro's font API**, which optimises loading, subsets 
 
 **The drop capital** on the first paragraph of each post is applied with `initial-letter` and scoped to viewports wider than 768px, where the layout has enough room for it to work. On mobile, the first paragraph renders normally. No JavaScript is involved.
 
-**Print continuity** means that Cmd+P produces a result close to the screen layout: the parchment background is preserved, the type scale holds, and the page does not collapse into a plain-text dump. Lipi is one of few web templates where printing is considered rather than ignored.
+**Print continuity** means that Cmd+P produces a result close to the screen layout: the parchment background is preserved, the type scale holds, and the page does not collapse into a plain-text dump. Lipi4k is one of few web templates where printing is considered rather than ignored.
 
 **The reading progress bar** at the top of each post is powered by CSS scroll-driven animations, with no JavaScript fallback needed for modern browsers.
 
 ## Source
 
-The Lipi is MIT licensed and the source is available at the link in the footer.
+Lipi4k is distributed under the MIT License, the same license used by the [original Lipi project](https://github.com/thelocalhoststudio/lipi). Its source is available from the link in the footer.

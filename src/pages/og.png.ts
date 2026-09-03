@@ -7,21 +7,21 @@ import type {
 import {
   generateOgImage,
 } from "@/utils/og";
+import siteConfig from "@/site.config";
 
 export const GET: APIRoute =
-  async (context) => {
+  async () => {
     const png =
       await generateOgImage(
         {
-          title: "Lipi",
+          title: siteConfig.title,
 
-          description:
-            "A minimal editorial theme for Astro focused on typography, chronology, and longform publishing.",
+          description: siteConfig.description,
 
           category:
             "Astro Theme",
 
-          site: "https://astro-lipi.pages.dev",
+          site: siteConfig.url,
         }
       );
 

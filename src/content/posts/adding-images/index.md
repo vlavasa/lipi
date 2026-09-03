@@ -1,6 +1,6 @@
 ---
 title: Images and Galleries
-description: How Lipi handles inline images, cover images, and post galleries — and the folder structure that makes it work.
+description: How Lipi4k handles inline images, cover images, and post galleries — and the folder structure that makes it work.
 published: 2026-05-14
 category: Guide
 cover: posts/adding-images/attachments/cover.png
@@ -11,7 +11,7 @@ tags:
   - writing
 ---
 
-Lipi supports images in two distinct ways. The first is inline: images embedded inside post content using standard markdown syntax, sitting alongside the prose. The second is a dedicated gallery that renders below the article as a separate visual section. The two serve different purposes and are set up differently, but they share the same folder convention.
+Lipi4k supports images in two distinct ways. The first is inline: images embedded inside post content using standard markdown syntax, sitting alongside the prose. The second is a dedicated gallery that renders below the article as a separate visual section. The two serve different purposes and are set up differently, but they share the same folder convention.
 
 ## Folder-based posts
 
@@ -45,11 +45,11 @@ Inside the post body, images use standard markdown syntax with paths relative to
 ![A view of the fort from the valley floor](./attachments/fort-valley.jpg)
 ```
 
-The `./attachments/` prefix is the convention Lipi expects. Place the image file in the post's `attachments/` directory, and reference it from there.
+The `./attachments/` prefix is the convention Lipi4k expects. Place the image file in the post's `attachments/` directory, and reference it from there.
 
 Inline images render as full-width figures within the article's reading column. Captions are supported through the standard `<figure>` and `<figcaption>` elements in MDX, or directly in markdown with the image `alt` text.
 
-The `rehype-unwrap-images` plugin in Lipi's markdown pipeline removes the `<p>` wrapper that markdown normally places around `<img>` tags, so images participate cleanly in the prose layout.
+The `rehype-unwrap-images` plugin in Lipi4k's markdown pipeline removes the `<p>` wrapper that markdown normally places around `<img>` tags, so images participate cleanly in the prose layout.
 
 Here is what an inline image with a caption looks like in MDX:
 
@@ -88,11 +88,11 @@ cover: posts/my-post/attachments/cover.jpg
 
 The path is vault-absolute from `src/content/` — not a relative path. This is different from inline image references, which use `./attachments/` relative paths.
 
-When `cover` is omitted, Lipi generates an OG image automatically from the post title using Satori. No cover file is required.
+When `cover` is omitted, Lipi4k generates an OG image automatically from the post title using Satori. No cover file is required.
 
 ## Galleries
 
-Any images placed in the `gallery/` directory of a post folder are automatically detected and rendered as a grid below the article. No frontmatter configuration is needed. Lipi discovers them at build time through a static glob and renders the `PostGallery` component when the folder is non-empty.
+Any images placed in the `gallery/` directory of a post folder are automatically detected and rendered as a grid below the article. No frontmatter configuration is needed. Lipi4k discovers them at build time through a static glob and renders the `PostGallery` component when the folder is non-empty.
 
 Name gallery images with a leading number to control display order:
 
@@ -104,10 +104,10 @@ gallery/
 └── 04-closing.jpg
 ```
 
-Lipi derives alt text from the filename automatically. Hyphens and underscores become spaces, the leading number is stripped, and each word is capitalised. `03-north-rampart-at-dusk.jpg` becomes `North Rampart At Dusk`. You can rely on this convention or override alt text by renaming the files descriptively.
+Lipi4k derives alt text from the filename automatically. Hyphens and underscores become spaces, the leading number is stripped, and each word is capitalised. `03-north-rampart-at-dusk.jpg` becomes `North Rampart At Dusk`. You can rely on this convention or override alt text by renaming the files descriptively.
 
 The gallery renders below the post body and above the tags and navigation. It includes a photo count and a section heading that defaults to `Gallery`. GLightbox handles the lightbox on click — each image opens full-screen with keyboard and swipe navigation, and all images in the post's gallery group together into a single browsable set.
 
 ## Supported formats
 
-Lipi's image glob picks up `.jpg`, `.jpeg`, `.png`, `.webp`, `.avif`, and `.gif` in both upper and lower case. Astro's image optimisation pipeline handles resizing and format conversion at build time, so you can supply high-resolution originals and let the build process produce the sizes the browser needs.
+Lipi4k's image glob picks up `.jpg`, `.jpeg`, `.png`, `.webp`, `.avif`, and `.gif` in both upper and lower case. Astro's image optimisation pipeline handles resizing and format conversion at build time, so you can supply high-resolution originals and let the build process produce the sizes the browser needs.

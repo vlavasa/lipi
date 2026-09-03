@@ -1,6 +1,6 @@
 ---
 title: Adding New Posts
-description: Everything a new Lipi author needs to know before writing the first word, from file location to frontmatter to the draft workflow.
+description: Everything a new Lipi4k author needs to know before writing the first word, from file location to frontmatter to the draft workflow.
 published: 2026-05-20
 category: Guide
 tags:
@@ -9,7 +9,7 @@ tags:
   - content
 ---
 
-Posts in Lipi are markdown files in the filesystem. There is no admin panel, no database, no upload form. You create a file, write in it, and the site builds from what it finds. This guide covers everything you need to go from an empty file to a published post.
+Posts in Lipi4k are markdown files in the filesystem. There is no admin panel, no database, no upload form. You create a file, write in it, and the site builds from what it finds. This guide covers everything you need to go from an empty file to a published post.
 
 ## Where Posts Live
 
@@ -17,7 +17,7 @@ All posts belong inside `src/content/posts/`. You can place files directly in th
 
 ```txt
 src/content/posts/
-├── introducing-lipi.md
+├── introducing-lipi4k.md
 ├── travel/
 │   ├── kyoto-november.md
 │   └── lisbon-in-rain.md
@@ -45,13 +45,13 @@ Every post needs a frontmatter block at the top of the file, delimited by `---`.
 
 `published` is required. The date the post was (or will be) published, in `YYYY-MM-DD` format. Posts are sorted by this date, newest first.
 
-`updated` is optional. When present, Lipi shows an "Updated on" note in the post metadata. Use it when you revise a post substantially enough that existing readers should know the text has changed.
+`updated` is optional. When present, Lipi4k shows an "Updated on" note in the post metadata. Use it when you revise a post substantially enough that existing readers should know the text has changed.
 
 `category` is optional. A single string that classifies the post. The default value is `Travels`, which reflects the template's origins in travel writing. Change it to whatever suits your publication: `Essays`, `Notes`, `Code`, `Journal`.
 
 `tags` is optional. An array of lowercase strings used to group related posts. Tags drive the "Related posts" section at the bottom of each article. They are lowercased and deduplicated automatically.
 
-`cover` is optional. A path to a cover image, either relative to the post file (`./cover.jpg`) or a URL. When present, the image is used as the OG image for the post. When absent, Lipi generates an OG image from the post title automatically.
+`cover` is optional. A path to a cover image, either relative to the post file (`./cover.jpg`) or a URL. When present, the image is used as the OG image for the post. When absent, Lipi4k generates an OG image from the post title automatically.
 
 `draft` is optional and defaults to `false`. Set it to `true` to prevent the post from appearing in the feed or being built to a public URL. Draft posts are excluded from production builds. During development (`astro dev`), draft posts are built and accessible by navigating to their URL directly.
 
@@ -81,7 +81,7 @@ The post at the top of the home page (the featured post, with the handwritten an
 
 ## Writing the Post
 
-Below the closing `---` of the frontmatter block, write the post body in standard markdown. Lipi supports GitHub-Flavored Markdown (tables, footnotes, strikethrough, fenced code blocks with language identifiers) and MDX if your file uses the `.mdx` extension.
+Below the closing `---` of the frontmatter block, write the post body in standard markdown. Lipi4k supports GitHub-Flavored Markdown (tables, footnotes, strikethrough, fenced code blocks with language identifiers) and MDX if your file uses the `.mdx` extension.
 
 The first paragraph of the post receives a drop capital in the published layout on larger screens. This is applied automatically. You do not need to mark it up differently.
 

@@ -6,7 +6,7 @@ A maintained fork of [Lipi](https://github.com/thelocalhoststudio/lipi), a typog
 
 > **Lipi** (लिपि) is the Sanskrit word for script, the written form of a language. **Lipi4k** is pronounced like “Lipi fork.”
 
-![Lipi4k preview](./public/lipi-preview.png)
+![Lipi4k preview](./public/lipi4k-preview.png)
 
 ---
 
@@ -90,7 +90,7 @@ const userConfig: UserConfig = {
 };
 ```
 
-The full configuration reference is in the [Configuring Lipi](./src/content/posts/configuring-lipi.md) guide included with the template.
+The full configuration reference is in the [Configuring Lipi4k](./src/content/posts/configuring-lipi4k.md) guide included with the template.
 
 ---
 

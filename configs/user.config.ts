@@ -1,11 +1,11 @@
 import type { UserConfig } from "../src/site.config";
 
 const userConfig: UserConfig = {
-  title: "Lipi",
+  title: "Lipi4k",
   description:
     "A minimal editorial theme for Astro built for blogs, journals, travel writing, and long-form publishing.",
 
-  url: "https://astro-lipi.pages.dev",
+  url: "https://example.com",
   author: "John Doe",
 
   logo: "/logo.svg",
@@ -20,14 +20,14 @@ const userConfig: UserConfig = {
   footerLinks: [
     { title: "RSS", url: "/rss.xml" },
     { title: "Archive", url: "/archive" },
-    { title: "Source", url: "https://github.com/thelocalhoststudio/lipi" },
+    { title: "Source", url: "https://github.com/vlavasa/lipi4k" },
     
   ],
 
   social: [
     {
       title: "GitHub",
-      url: "https://github.com/thelocalhoststudio/lipi",
+      url: "https://github.com/vlavasa/lipi4k",
       icon: "github",
     },
     {
@@ -43,7 +43,7 @@ const userConfig: UserConfig = {
     
   ],
 
-  footerCredits: "Designed for reading. Built with Astro & Lipi",
+  footerCredits: "Designed for reading. Built with Astro & Lipi4k",
 
   postsPerPage: 8,
   recentPosts: 6,

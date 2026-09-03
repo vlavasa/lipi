@@ -42,7 +42,7 @@ export default defineConfig({
   fonts: [
     {
       name: "Manrope",
-      cssVariable: "--font-lipi-sans",
+      cssVariable: "--font-lipi4k-sans",
       provider: fontProviders.fontsource(),
       weights: [300, 400, 500, 600, 700],
       fallbacks: ["sans-serif"],
@@ -50,7 +50,7 @@ export default defineConfig({
     },
     {
       name: "Literata",
-      cssVariable: "--font-lipi-serif",
+      cssVariable: "--font-lipi4k-serif",
       provider: fontProviders.fontsource(),
       weights: [300, 400, 500, 600, 700],
       fallbacks: ["serif"],
@@ -58,7 +58,7 @@ export default defineConfig({
     },
     {
       name: "Fira Code",
-      cssVariable: "--font-lipi-mono",
+      cssVariable: "--font-lipi4k-mono",
       provider: fontProviders.fontsource(),
       weights: [ 400, 500, 600, 700],
       fallbacks: ["monospace"],
@@ -66,7 +66,7 @@ export default defineConfig({
     },
     {
       name: "Caveat",
-      cssVariable: "--font-lipi-hand",
+      cssVariable: "--font-lipi4k-hand",
       provider: fontProviders.fontsource(),
       weights: [ 400, 500, 600, 700],
       fallbacks: ["serif"],
