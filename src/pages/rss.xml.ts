@@ -5,10 +5,14 @@ import {
   getAllPosts,
   getPostUrl,
 } from "@/utils/content";
+import { absoluteUrl } from "@/utils/url";
 
 export async function GET(context: APIContext) {
   const posts = await getAllPosts();
-  const site = context.site ?? siteConfig.url;
+  const site = absoluteUrl(
+    "/",
+    context.site ?? siteConfig.url
+  );
 
   return rss({
     title: siteConfig.title,

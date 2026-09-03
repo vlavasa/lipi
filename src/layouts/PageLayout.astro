@@ -54,17 +54,12 @@ const formattedDate = last?.toLocaleDateString("en-US", {
   month: "long",
 });
 
-const ogImage = entry
-  ? `/og/${entry.id}.png`
-  : undefined;
-
 ---
 <BaseLayout schema={schema}>
   <SEO
     slot="seo"
     title={title}
     description={description ?? ""}
-    ogImage={ogImage}
     {noindex}
   />
   <Fragment slot="header">

@@ -1,5 +1,6 @@
 ---
 import siteConfig from "@/site.config";
+import { absoluteUrl } from "@/utils/url";
 
 interface Props {
   title: string;
@@ -27,11 +28,10 @@ const pageTitle = `${title} - ${siteConfig.title}`;
 const canonical = new URL(Astro.url.pathname, siteConfig.url).href;
 
 // ogImage wins for social sharing; image (cover) is fallback; then default
-const resolvedOgImage = ogImage
-  ? new URL(ogImage, siteConfig.url).href
-  : image
-  ? new URL(image, siteConfig.url).href
-  : new URL('/og/default.png', siteConfig.url).href;
+const resolvedOgImage = absoluteUrl(
+  ogImage ?? image ?? siteConfig.ogImage,
+  siteConfig.url
+);
 ---
 
 <!-- Core -->

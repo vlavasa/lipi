@@ -1,5 +1,6 @@
 import siteConfig from "@/site.config";
 import { type Post, type Page, getPostUrl } from "./content";
+import { absoluteUrl } from "./url";
 
 export function generateWebsiteSchema() {
   return {
@@ -7,7 +8,7 @@ export function generateWebsiteSchema() {
     "@type": "WebSite",
     name: siteConfig.title,
     description: siteConfig.description,
-    url: siteConfig.url,
+    url: absoluteUrl("/", siteConfig.url),
   };
 }
 
@@ -24,9 +25,9 @@ export function generatePostSchema(
       post.data.updated ??
       post.data.published,
 
-    url: getPostUrl(
-      post.id,
-      post.filePath
+    url: absoluteUrl(
+      getPostUrl(post.id, post.filePath),
+      siteConfig.url
     ),
 
     author: {
@@ -44,14 +45,11 @@ export function generateAboutSchema(
     "@type": "AboutPage",
     name: page.data.title,
     description: page.data.description,
-    url: new URL(
-      "/about",
-      siteConfig.url
-    ).toString(),
+    url: absoluteUrl("/about", siteConfig.url),
     isPartOf: {
       "@type": "WebSite",
       name: siteConfig.title,
-      url: siteConfig.url,
+      url: absoluteUrl("/", siteConfig.url),
     },
     author: {
       "@type": "Person",

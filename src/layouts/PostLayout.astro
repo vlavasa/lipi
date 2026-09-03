@@ -1,7 +1,7 @@
 ---
 import siteConfig from "@/site.config";
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import { type Post, getPostSlug, getAllPosts, getRelatedPosts } from "@/utils/content";
+import { type Post, getPostUrl, getAllPosts, getRelatedPosts } from "@/utils/content";
 import { slugify } from "@/utils/text";
 import { getCoverImage, getGalleryImages } from "@/utils/image";
 import Breadcrumb from "@/components/Breadcrumb.astro";
@@ -17,6 +17,7 @@ import SectionHeader from "@/components/SectionHeader.astro";
 import ImageWrapper from "@/components/ImageWrapper.astro";
 import PostGallery from "@/components/content/PostGallery.astro";
 import GalleryInit from "@/components/GalleryInit.astro";
+import { getAssetPath } from "@/utils/url";
 
 type Props = {
   post: Post;
@@ -50,7 +51,7 @@ const { title, description, cover, published, tags } = post.data;
 
 const allPosts    = await getAllPosts();
 const relatedPosts = getRelatedPosts(post, allPosts, siteConfig.relatedPosts);
-const ogImage = `/og/posts/${getPostSlug(post.id, post.filePath)}.png`;
+const ogImage = `${getPostUrl(post.id, post.filePath)}/index.png`;
 const structuredData = generatePostSchema(post);
 const coverImage = getCoverImage(cover);
 const galleryImages = getGalleryImages(post.filePath ?? '');
@@ -138,7 +139,7 @@ const galleryImages = getGalleryImages(post.filePath ?? '');
             {post.data.tags.map(
               (tag) => (
                 <a
-                  href={`/tags/${slugify(tag)}`}
+                  href={getAssetPath(`/tags/${slugify(tag)}`)}
                   class="text-sm underline font-ui text-muted-foreground link-hover"
                 >
                   {tag}

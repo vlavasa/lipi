@@ -15,11 +15,13 @@ import { remarkImageProcessing } from './src/plugins/remark-image-processing';
 import { remarkExternalLinks } from './src/plugins/remark-external-links.ts';
 import { remarkObsidian } from './src/plugins/remark-obsidian.ts';
 
+const base = process.env.BASE_PATH ?? "/";
 
 // https://astro.build/config
 export default defineConfig({
   root: fileURLToPath(new URL(".", import.meta.url)),
   site: siteConfig.url,
+  base,
 
   image: {
     responsiveStyles: true,

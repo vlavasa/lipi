@@ -2,7 +2,7 @@
 
 A maintained fork of [Lipi](https://github.com/thelocalhoststudio/lipi), a typography-first Astro template for long-form writing. Built for essays, travel notes, developer journals, and personal archives — publishing environments where the words come first.
 
-**[Source](https://github.com/vlavasa/lipi4k)** · **[Original Lipi project](https://github.com/thelocalhoststudio/lipi)** · **[Original Lipi demo](https://astro-lipi.pages.dev)**
+**[Demo](https://vlavasa.github.io/lipi4k/)** · **[Source](https://github.com/vlavasa/lipi4k)** · **[Original Lipi project](https://github.com/thelocalhoststudio/lipi)** · **[Original Lipi demo](https://astro-lipi.pages.dev)**
 
 > **Lipi** (लिपि) is the Sanskrit word for script, the written form of a language. **Lipi4k** is pronounced like “Lipi fork.”
 
@@ -63,6 +63,12 @@ npm run dev
 ```
 
 The dev server starts at `http://localhost:4321`.
+
+### Deploy to GitHub Pages
+
+The included GitHub Actions workflow deploys `main` to GitHub Pages. For this repository it sets `BASE_PATH=/lipi4k`, so the published site is available at `https://vlavasa.github.io/lipi4k/` while local development continues to use `/`.
+
+In the repository settings, choose **GitHub Actions** as the Pages source. When reusing the template in another project repository, update `BASE_PATH` in `.github/workflows/deploy.yml` to match that repository name and set `url` in `configs/user.config.ts` to the corresponding GitHub Pages origin.
 
 ---
 

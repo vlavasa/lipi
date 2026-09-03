@@ -5,7 +5,7 @@ const userConfig: UserConfig = {
   description:
     "A minimal editorial theme for Astro built for blogs, journals, travel writing, and long-form publishing.",
 
-  url: "https://example.com",
+  url: "https://vlavasa.github.io",
   author: "John Doe",
 
   logo: "/logo.svg",

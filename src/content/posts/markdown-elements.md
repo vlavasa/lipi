@@ -125,8 +125,8 @@ A figure is an image with context. The caption is not a description of what the 
 The syntax in Lipi4k is standard markdown image syntax inside a `<figure>` element:
 
 <figure>
-  <img src="/placeholder.jpg" alt="The stone lanterns at Fushimi Inari, photographed at dusk with the path behind them still warm from the day." />
-  <figcaption>Fushimi Inari, Kyoto. The lanterns at the base of the mountain are the oldest; the ones near the summit are more recent dedications.</figcaption>
+  <img src="../../lipi4k-preview.png" alt="The Lipi4k home page in its light and dark themes." />
+  <figcaption>The Lipi4k home page. A figure caption adds context instead of repeating the image description.</figcaption>
 </figure>
 
 ---
